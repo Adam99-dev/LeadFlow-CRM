@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.tilted-dashboard {
+  transform: perspective(1200px) rotateX(8deg) rotateY(-12deg);
+  transition: transform 0.4s ease;
+}
+
+.tilted-dashboard:hover {
+  transform: perspective(1200px) rotateX(4deg) rotateY(-6deg);
+}
+
+.glow-purple {
+  box-shadow: 0 0 60px -10px rgba(139, 92, 246, 0.6);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
